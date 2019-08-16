@@ -5,13 +5,13 @@
 # AquaFly-SeawaterGutHealth-Aquaculture-2019
 This repository contains the data and code to reproduce the results presented in the paper **Total replacement of fish meal with black soldier fly (*Hermetia illucens*) larvae meal does not compromise the gut health of Atlantic salmon (*Salmo salar*)**.
 
-# Run codes online
+## Run codes online
 To run the analyses online, simply click on the `launch binder` badge above to start an RStudio instance. Note that multi-core parallel computing won't be availbe for the RStudio stance we use here. Thus, delete the codes for running parallel parametric bootstraps if you run the analyses via binder.
 
-# Run codes locally
+## Run codes locally
 To run the analyses locally, download this repository as a zipped file. After decompression, open the R project file (`AqFl2_GutHealth.Rproj`) in the RStudio and run the R codes directly from the project root directory. Versions of R packages for each anaylsis can be found in the session information (*_sessionInfo.txt) under the same folder of R codes.
 
-# File organization
+## File organization
 Below is an overview of the file organization descending to level-3 directories.
 ```
 root
@@ -78,5 +78,5 @@ root
         ├── ref_gene_rank_DI.pdf
         └── ref_gene_rank_PI.pdf
 ```
-# Acknowledgements
+## Acknowledgements
 The R package [holepunch](https://karthik.github.io/holepunch/) was used to make the present R project binder-ready. Thanks are due to the *holepunch* developer Karthik Ram, who kindly helped to configure the Docker file and get the binder up and running.
