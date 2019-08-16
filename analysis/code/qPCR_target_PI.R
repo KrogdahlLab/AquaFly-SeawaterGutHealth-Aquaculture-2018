@@ -10,7 +10,7 @@ library(pbkrtest) # parametric bootstrap for testing fixed effects in LMMs
 Sys.setlocale(category = "LC_ALL", locale = "Greek")
 
 # Import data 
-df <- read_csv("data/clean_data/AqFl2_qPCR_Target_PI.csv", 
+df <- read_csv("data/clean_data/AqFl2_qPCR_target_PI.csv", 
                col_names = T, na = "") 
 
 # The encoding of the csv file need to be UTF-8, otherwise greek letters won't be recognized. To do that:
