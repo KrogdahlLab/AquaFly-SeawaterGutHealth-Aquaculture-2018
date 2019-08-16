@@ -1,19 +1,17 @@
 Type: Compendium
 Package: AquaFly-SeawaterGutHealth-Aquaculture-2019
-Title: What the Package Does (One Line, Title Case)
+Title: A Research Compendium for the Paper: Total Replacement of Fish Meal with Black Soldier Fly (Hermetia illucens) Larvae Meal Does not Compromise the Gut Health of Atlantic Salmon (Salmo salar) 
 Version: 0.0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Yanxian",
+           family = "Li",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: This research compendia contains the data and
-    code to reproduce the results presented in the paper: Total
-    replacement of fish meal with black soldier fly (Hermetia illucens)
-    larvae meal does not compromise the gut health of Atlantic salmon
-    (Salmo salar)
-License: What license it uses
+           email = "yanxian_li@163.com",
+           comment = c(ORCID = "0000-0001-8529-2564"))
+Description: This research compendia contains the data and code to reproduce the results presented in the paper: 
+             Total replacement of fish meal with black soldier fly (Hermetia illucens) larvae meal does not compromise 
+             the gut health of Atlantic salmon (Salmo salar)
+License: MIT
 Depends: 
     broom,
     ComplexHeatmap,
