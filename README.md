@@ -5,13 +5,20 @@
 # AquaFly-SeawaterGutHealth-Aquaculture-2019
 This repository contains the data and code to reproduce the results presented in the paper **Total replacement of fish meal with black soldier fly (*Hermetia illucens*) larvae meal does not compromise the gut health of Atlantic salmon (*Salmo salar*)**.
 
-To rerun the analyses online, simply click on the Binder badge. Note that this's still under testing and may fail.
+# Run codes online
+To run the analyses online, simply click on the `launch binder` badge above to start an RStudio instance. Note that multi-core parallel computing won't be availbe for the RStudio stance we use here. Thus, delete the codes for running parallel parametric bootstraps if you run the analyses via binder.
 
-To rerun the analyses locally, download this repository as a zipped file. After decompression, open the R project file (`AqFl2_GutHealth.Rproj`) in the RStudio and run the R codes directly from the project root directory. Versions of R packages for each anaylsis can be found in the session information (*_sessionInfo.txt) under the same folder of R codes.
+# Run codes locally
+To run the analyses locally, download this repository as a zipped file. After decompression, open the R project file (`AqFl2_GutHealth.Rproj`) in the RStudio and run the R codes directly from the project root directory. Versions of R packages for each anaylsis can be found in the session information (*_sessionInfo.txt) under the same folder of R codes.
 
+# File organization
 Below is an overview of the file organization descending to level-3 directories.
 ```
 root
+├── AqFl2_GutHealth.Rproj
+├── DESCRIPTION
+├── LICENSE
+├── README.md
 ├── analysis
 │   ├── code
 │   │   ├── histology.R
@@ -27,9 +34,9 @@ root
 │   │   ├── qPCR_target_PI.R
 │   │   └── qPCR_target_PI_sessionInfo.txt
 │   ├── exploratory_analysis
-│   │   ├── histology_histogram.pdf
 │   │   ├── OSI_boxPlot.pdf
 │   │   ├── OSI_violin.pdf
+│   │   ├── histology_histogram.pdf
 │   │   ├── qPCR_ref_DI_barPlot.pdf
 │   │   ├── qPCR_ref_DI_boxPlot.pdf
 │   │   ├── qPCR_ref_DI_pointDiagram.pdf
@@ -49,21 +56,18 @@ root
 │       ├── qPCR_DI_welch-t_qqplot.pdf
 │       ├── qPCR_PI_LMMs_residual.pdf
 │       └── qPCR_PI_welch-t_qqplot.pdf
-├── AqFl2_GutHealth.Rproj
 ├── data
+│   ├── README.md
 │   ├── clean_data
 │   │   ├── AqFl2_qPCR_ref_DI.csv
 │   │   ├── AqFl2_qPCR_ref_PI.csv
-│   │   ├── AqFl2_qPCR_Target_DI.csv
-│   │   ├── AqFl2_qPCR_Target_PI.csv
+│   │   ├── AqFl2_qPCR_target_DI.csv
+│   │   ├── AqFl2_qPCR_target_PI.csv
 │   │   └── Interplate_calibration.xlsx
-│   ├── raw_data
-│   │   ├── AqFl2_histology.csv
-│   │   ├── AqFl2_LightCycler_files
-│   │   └── AqFl2_organosomatic_index.csv
-│   └── README.md
-├── LICENSE
-├── README.md
+│   └── raw_data
+│       ├── AqFl2_LightCycler_files
+│       ├── AqFl2_histology.csv
+│       └── AqFl2_organosomatic_index.csv
 └── results
     ├── figures
     │   ├── Figure 1.tiff
@@ -74,3 +78,5 @@ root
         ├── ref_gene_rank_DI.pdf
         └── ref_gene_rank_PI.pdf
 ```
+# Acknowledgements
+The R package [holepunch](https://karthik.github.io/holepunch/) was used to make the present R project binder-ready. Thanks are due to the *holepunch* developer Karthik Ram, who kindly helped to configure the Docker file and get the binder up and running.
