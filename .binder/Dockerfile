@@ -10,4 +10,4 @@ RUN apt-get update -y\
 && R -e "install.packages('BiocManager')"\
 && R -e "BiocManager::install('ComplexHeatmap')" 
 USER ${NB_USER}
-RUN wget https://github.com/KrogdahlLab/AquaFly-SeawaterGutHealth-Aquaculture-2018/raw/master/DESCRIPTION && R -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2019-08-15/')); devtools::install_deps()"
+RUN wget https://github.com/KrogdahlLab/AquaFly-SeawaterGutHealth-Aquaculture-2019/raw/master/DESCRIPTION && R -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2019-08-16/')); devtools::install_deps()"
