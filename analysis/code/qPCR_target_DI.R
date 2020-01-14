@@ -391,5 +391,28 @@ decorate_annotation("p_adj", slice = 4, {
 
 dev.off()
 
+# Make Figure S2 ###############################################################
+set.seed(1910)
+
+df %>%
+  group_by(Target, Diet) %>%
+  ggplot(aes(x = Diet, y = MNE)) +
+  geom_boxplot(aes(fill = Diet), width = 0.5, outlier.shape = NA) +
+  geom_jitter(shape = 16, size = 1, alpha = 0.5, position = position_jitter(0.2)) +
+  facet_wrap(~ Target, ncol = 5, scales = "free_y") +
+  scale_y_continuous(labels = function(x) formatC(x, format = "e", digits = 1)) + 
+  labs(y = "Mean normalized expression") +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal(base_size = 12) +
+  theme(strip.text = element_text(face = "bold.italic"),
+        legend.position = "none")
+
+ggsave('results/figures/Figure S2.tiff', 
+       units = "in", 
+       dpi = 300, 
+       compression = "lzw",
+       height = 10, 
+       width = 8)
+
 # Get session info 
 writeLines(capture.output(sessionInfo()), "analysis/code/qPCR_target_DI_sessionInfo.txt")
