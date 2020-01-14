@@ -73,7 +73,9 @@ root
     │   ├── Figure 1.tiff
     │   ├── Figure 2.tiff
     │   ├── Figure 3.tiff
-    │   └── Figure 4.tiff
+    │   ├── Figure 4.tiff
+    │   ├── Figure S1.tiff
+    │   └── Figure S2.tiff
     └── reference_gene_ranks
         ├── ref_gene_rank_DI.pdf
         └── ref_gene_rank_PI.pdf
